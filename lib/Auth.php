@@ -79,7 +79,6 @@ Class MisskeyAuth{
             'appSecret' =>  $this->appSecret,
             'token'     =>  $this->appToken
         ];
-        var_dump($data);
         $res = $this->post($this->host.'/api/auth/session/userkey', $data);
         if(isset($res->accessToken))
             $this->accessToken = $res->accessToken;
