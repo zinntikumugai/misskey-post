@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Misskey Post
-Version: 1.0.0
+Version: 1.0.1
 Author: zinntikumugai
 Author URI: https://www.zinntikumugai.com
 License: GPL-3
