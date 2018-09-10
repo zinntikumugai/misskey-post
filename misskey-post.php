@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Misskey Post
-Version: 1.0.1
+Version: 1.0.2
 Author: zinntikumugai
 Author URI: https://www.zinntikumugai.com
 License: GPL-3
@@ -12,7 +12,12 @@ class Misskey {
 
     public function __construct() {
         add_action('init', [$this, 'session']);
-        add_action('publish_post', [$this, 'Post']);
+        add_action('new_to_publish', [$this, 'Post']);
+        add_action('draft_to_publish', [$this, 'Post']);
+        add_action('pending_to_publish', [$this, 'Post']);
+        add_action('auto-draft_to_publish', [$this, 'Post']);
+        add_action('future_to_publish', [$this, 'Post']);
+        add_action('private_to_publish', [$this, 'Post']);
     }
 
     public function menu() {
